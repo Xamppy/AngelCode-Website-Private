@@ -68,7 +68,7 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        "pixel-card bg-neutral-gray-dark border-2 border-neutral-gray-light rounded-lg overflow-hidden cursor-pointer transition-all duration-300 hover:border-purple-primary hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-primary/20 h-full flex flex-col min-h-[700px] sm:min-h-[600px] lg:min-h-[550px]",
+        "pixel-card bg-neutral-gray-dark border-2 border-neutral-gray-light rounded-lg cursor-pointer transition-all duration-300 hover:border-purple-primary hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-primary/20 h-full flex flex-col min-h-[700px] sm:min-h-[600px] lg:min-h-[550px]",
         className
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -76,7 +76,7 @@ export function ProjectCard({
       onClick={handleCardClick}
     >
       {/* Thumbnail/Header */}
-      <div className="relative h-40 sm:h-48 overflow-hidden flex-shrink-0">
+      <div className="relative h-40 sm:h-48 overflow-hidden flex-shrink-0 rounded-t-lg">
         {/* Background Preview Image */}
         {previewImage && (
           <Image
@@ -188,17 +188,10 @@ export function ProjectCard({
             {achievements.slice(0, 3).map((achievement, index) => (
               <div
                 key={index}
-                className="w-6 h-6 sm:w-8 sm:h-8 bg-yellow-400/20 border border-yellow-400 rounded flex items-center justify-center group relative"
+                className="w-6 h-6 sm:w-8 sm:h-8 bg-yellow-400/20 border border-yellow-400 rounded flex items-center justify-center"
                 title={achievement.title}
               >
                 <span className="text-yellow-400 text-[10px] sm:text-xs">{achievement.icon}</span>
-                
-                {/* Tooltip - Fixed positioning */}
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-neutral-black border border-yellow-400/50 text-xs text-white rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 pointer-events-none">
-                  {achievement.title}
-                  {/* Arrow */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-b-2 border-transparent border-b-neutral-black"></div>
-                </div>
               </div>
             ))}
           </div>
