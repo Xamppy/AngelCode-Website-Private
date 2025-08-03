@@ -1,0 +1,18 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="url(#gradient4)"/>
+  <defs>
+    <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2A2A2A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Sports/medical icon -->
+  <g transform="translate(175, 125)">
+    <circle cx="25" cy="25" r="20" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+    <path d="M15 25 L35 25 M25 15 L25 35" stroke="#8B5CF6" stroke-width="2"/>
+    <circle cx="25" cy="10" r="6" fill="#8B5CF6"/>
+  </g>
+  <!-- Title -->
+  <text x="200" y="200" text-anchor="middle" fill="#CCCCCC" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Sistema Kinesiológico</text>
+  <text x="200" y="220" text-anchor="middle" fill="#A78BFA" font-family="Arial, sans-serif" font-size="12">Salud Deportiva</text>
+</svg>
