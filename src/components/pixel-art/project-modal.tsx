@@ -79,31 +79,32 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
           </button>
         </div>
 
-        {/* Tabs */}
+        {/* Tabs - Smaller for mobile */}
         <div className="flex border-b border-neutral-gray-light/20">
           {[
-            { id: 'overview', label: 'Overview', icon: Zap },
-            { id: 'tech', label: 'Tech Stack', icon: Code },
-            { id: 'architecture', label: 'Architecture', icon: TrendingUp }
+            { id: 'overview', label: 'Overview', icon: Zap, shortLabel: 'Info' },
+            { id: 'tech', label: 'Tech Stack', icon: Code, shortLabel: 'Tech' },
+            { id: 'architecture', label: 'Architecture', icon: TrendingUp, shortLabel: 'Arch' }
           ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as 'overview' | 'tech' | 'architecture')}
               className={cn(
-                "flex items-center gap-2 px-6 py-4 font-mono text-sm transition-colors",
+                "flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-2 sm:py-4 font-mono text-xs sm:text-sm transition-colors flex-1 justify-center",
                 activeTab === tab.id
                   ? "bg-purple-primary/20 text-purple-primary border-b-2 border-purple-primary"
                   : "text-neutral-white/70 hover:text-white hover:bg-neutral-gray-medium/50"
               )}
             >
-              <tab.icon className="w-4 h-4" />
-              {tab.label}
+              <tab.icon className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="hidden sm:inline">{tab.label}</span>
+              <span className="sm:hidden">{tab.shortLabel}</span>
             </button>
           ))}
         </div>
 
         {/* Content */}
-        <div className="p-6 max-h-[60vh] overflow-y-auto scrollbar-thin">
+        <div className="p-4 sm:p-6 max-h-[55vh] sm:max-h-[60vh] overflow-y-auto scrollbar-thin">
           {activeTab === 'overview' && (
             <div className="space-y-6">
               {/* Description */}
@@ -204,9 +205,9 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
           )}
         </div>
 
-        {/* Footer */}
-        <div className="flex items-center justify-between p-6 border-t border-neutral-gray-light/20">
-          <div className="flex gap-3">
+        {/* Footer - Improved mobile layout */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-4 sm:p-6 border-t border-neutral-gray-light/20 gap-3 sm:gap-0">
+          <div className="flex flex-col sm:flex-row gap-3 flex-1">
             <button 
               onClick={() => {
                 if (project && onViewImages) {
@@ -214,12 +215,12 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
                 }
               }}
               disabled={!project?.screenshots || project.screenshots.length === 0}
-              className="bg-purple-primary text-white px-4 py-2 rounded-lg font-mono text-sm hover:bg-purple-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-purple-primary text-white px-4 py-3 sm:py-2 rounded-lg font-mono text-sm hover:bg-purple-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-h-[44px] flex-1 sm:flex-initial"
             >
-              <svg className="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 inline mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              Ver Imágenes ({project?.screenshots?.length || 0})
+              <span className="truncate">Ver Imágenes ({project?.screenshots?.length || 0})</span>
             </button>
             <button 
               onClick={() => {
@@ -227,17 +228,17 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
                   onConsultProject(project.title)
                 }
               }}
-              className="bg-neutral-gray-medium text-white px-4 py-2 rounded-lg font-mono text-sm hover:bg-neutral-gray-light transition-colors"
+              className="bg-neutral-gray-medium text-white px-4 py-3 sm:py-2 rounded-lg font-mono text-sm hover:bg-neutral-gray-light transition-colors flex items-center justify-center min-h-[44px] flex-1 sm:flex-initial"
             >
-              <svg className="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 inline mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              Consultar Proyecto
+              <span className="truncate">Consultar</span>
             </button>
           </div>
           <button
             onClick={onClose}
-            className="text-neutral-white/70 hover:text-white transition-colors font-mono text-sm"
+            className="text-neutral-white/70 hover:text-white transition-colors font-mono text-xs sm:text-sm text-center sm:text-left"
           >
             Cerrar [ESC]
           </button>
