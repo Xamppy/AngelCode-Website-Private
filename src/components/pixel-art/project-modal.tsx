@@ -64,9 +64,9 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-sm sm:max-w-2xl lg:max-w-5xl max-h-[90vh] bg-neutral-gray-dark border-2 border-purple-primary rounded-lg overflow-hidden">
+      <div className="relative w-full max-w-sm sm:max-w-3xl lg:max-w-6xl max-h-[90vh] bg-neutral-gray-dark border-2 border-purple-primary rounded-lg overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-neutral-gray-light/20">
+        <div className="flex items-center justify-between p-4 sm:p-5 border-b border-neutral-gray-light/20">
           <div>
             <h2 className="text-2xl font-bold text-white">{project.title}</h2>
             <span className="text-purple-light font-mono">{project.industry}</span>
@@ -104,7 +104,7 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
         </div>
 
         {/* Content */}
-        <div className="p-4 sm:p-6 max-h-[55vh] sm:max-h-[60vh] overflow-y-auto scrollbar-thin">
+        <div className="p-3 sm:p-5 max-h-[55vh] sm:max-h-[60vh] overflow-y-auto scrollbar-thin">
           {activeTab === 'overview' && (
             <div className="space-y-6">
               {/* Description */}
@@ -205,10 +205,10 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
           )}
         </div>
 
-        {/* Footer - Improved layout for both mobile and desktop */}
-        <div className="p-4 sm:p-6 border-t border-neutral-gray-light/20">
+        {/* Footer - Ultra compact layout */}
+        <div className="p-3 sm:p-4 border-t border-neutral-gray-light/20">
           {/* Action buttons */}
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-4">
+          <div className="flex flex-col sm:flex-row gap-1.5 mb-2 sm:mb-3">
             <button 
               onClick={() => {
                 if (project && onViewImages) {
@@ -216,9 +216,9 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
                 }
               }}
               disabled={!project?.screenshots || project.screenshots.length === 0}
-              className="bg-purple-primary text-white px-3 sm:px-4 py-3 sm:py-2 rounded-lg font-mono text-xs sm:text-sm hover:bg-purple-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-h-[44px] flex-1"
+              className="bg-purple-primary text-white px-1.5 py-2.5 sm:py-1.5 rounded font-mono text-[10px] sm:text-xs hover:bg-purple-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-h-[40px] flex-1"
             >
-              <svg className="w-3 h-3 sm:w-4 sm:h-4 inline mr-1 sm:mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-2.5 h-2.5 inline mr-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               <span className="truncate">Ver Imágenes ({project?.screenshots?.length || 0})</span>
@@ -229,9 +229,9 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
                   onConsultProject(project.title)
                 }
               }}
-              className="bg-neutral-gray-medium text-white px-3 sm:px-4 py-3 sm:py-2 rounded-lg font-mono text-xs sm:text-sm hover:bg-neutral-gray-light transition-colors flex items-center justify-center min-h-[44px] flex-1"
+              className="bg-neutral-gray-medium text-white px-1.5 py-2.5 sm:py-1.5 rounded font-mono text-[10px] sm:text-xs hover:bg-neutral-gray-light transition-colors flex items-center justify-center min-h-[40px] flex-1"
             >
-              <svg className="w-3 h-3 sm:w-4 sm:h-4 inline mr-1 sm:mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-2.5 h-2.5 inline mr-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span className="truncate">Consultar</span>
@@ -239,10 +239,10 @@ export function ProjectModal({ project, isOpen, onClose, onViewImages, onConsult
           </div>
           
           {/* Close button */}
-          <div className="flex justify-center sm:justify-end">
+          <div className="flex justify-center sm:justify-end mt-2">
             <button
               onClick={onClose}
-              className="text-neutral-white/70 hover:text-white transition-colors font-mono text-xs sm:text-sm"
+              className="text-neutral-white/70 hover:text-white transition-colors font-mono text-xs opacity-80"
             >
               Cerrar [ESC]
             </button>
