@@ -59,12 +59,11 @@ export function Testimonials({ className }: TestimonialsProps) {
 
   // Estados del carrusel
   const [isPaused, setIsPaused] = useState(false)
-  const [speed, setSpeed] = useState(1) // Velocidad variable 0.5x a 3x
   const [isDragging, setIsDragging] = useState(false)
 
   // Motion values para control suave
   const x = useMotionValue(0)
-  const baseVelocity = -50 // Velocidad base en pixels por segundo
+  const baseVelocity = -40 // Velocidad base en pixels por segundo (reducida de -50 a -40)
 
   // Ref para dimensiones
   const containerRef = useRef<HTMLDivElement>(null)
@@ -74,7 +73,7 @@ export function Testimonials({ className }: TestimonialsProps) {
     if (isPaused || isDragging) return
 
     // Calcular movimiento basado en velocidad y delta time
-    const moveBy = (baseVelocity * speed * delta) / 1000
+    const moveBy = (baseVelocity * delta) / 1000
     const currentX = x.get()
 
     // Reset cuando llegue al final del primer set
