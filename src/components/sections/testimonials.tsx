@@ -1,8 +1,9 @@
 'use client'
 
 import { Star } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useAnimationFrame } from 'framer-motion'
 import { useScrollAnimation } from '@/lib/hooks'
+import { useRef, useState } from 'react'
 
 interface Testimonial {
   id: string
@@ -44,8 +45,8 @@ const testimonials: Testimonial[] = [
   }
 ]
 
-// Duplicar testimonios para scroll infinito
-const infiniteTestimonials = [...testimonials, ...testimonials, ...testimonials]
+// Multiplicar para scroll infinito más suave
+const infiniteTestimonials = [...testimonials, ...testimonials, ...testimonials, ...testimonials]
 
 interface TestimonialsProps {
   className?: string
@@ -55,6 +56,38 @@ export function Testimonials({ className }: TestimonialsProps) {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation()
   const { ref: carouselRef, isVisible: carouselVisible } = useScrollAnimation()
   const { ref: metricsRef, isVisible: metricsVisible } = useScrollAnimation()
+
+  // Estados del carrusel
+  const [isPaused, setIsPaused] = useState(false)
+  const [speed, setSpeed] = useState(1) // Velocidad variable 0.5x a 3x
+  const [isDragging, setIsDragging] = useState(false)
+
+  // Motion values para control suave
+  const x = useMotionValue(0)
+  const baseVelocity = -50 // Velocidad base en pixels por segundo
+
+  // Ref para dimensiones
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  // Animación frame por frame
+  useAnimationFrame((t, delta) => {
+    if (isPaused || isDragging) return
+
+    // Calcular movimiento basado en velocidad y delta time
+    const moveBy = (baseVelocity * speed * delta) / 1000
+    const currentX = x.get()
+
+    // Reset cuando llegue al final del primer set
+    const cardWidth = 384 + 24 // w-96 + gap-6
+    const resetPoint = -(cardWidth * testimonials.length)
+
+    if (currentX <= resetPoint) {
+      x.set(0)
+    } else {
+      x.set(currentX + moveBy)
+    }
+  })
+
   return (
     <section id="testimonials" className={`section-padding bg-neutral-black ${className}`}>
       <div className="container">
@@ -75,19 +108,46 @@ export function Testimonials({ className }: TestimonialsProps) {
           </p>
         </motion.div>
 
-        {/* Infinite Scroll Testimonials */}
+       
+
+        {/* Draggable Infinite Scroll Testimonials */}
         <motion.div
           ref={carouselRef}
-          className="relative overflow-hidden"
+          className="relative overflow-hidden cursor-grab active:cursor-grabbing"
           initial={{ opacity: 0, x: -100 }}
           animate={carouselVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="flex animate-scroll-left gap-6 hover:pause-animation">
+          <motion.div
+            ref={containerRef}
+            className="flex gap-6"
+            style={{ x }}
+            drag="x"
+            dragConstraints={{ left: -2000, right: 200 }}
+            dragElastic={0.1}
+            dragTransition={{ bounceStiffness: 300, bounceDamping: 30 }}
+            onDragStart={() => {
+              setIsDragging(true)
+              setIsPaused(true)
+            }}
+            onDragEnd={() => {
+              setIsDragging(false)
+              // Reanudar después de 2 segundos
+              setTimeout(() => setIsPaused(false), 3000)
+            }}
+            whileHover={{ cursor: "grab" }}
+            whileDrag={{ cursor: "grabbing" }}
+          >
             {infiniteTestimonials.map((testimonial, index) => (
-              <div
+              <motion.div
                 key={`${testimonial.id}-${index}`}
-                className="flex-shrink-0 w-72 sm:w-80 lg:w-96 bg-neutral-gray-dark border border-neutral-gray-light rounded-lg p-4 sm:p-6 hover:border-purple-primary transition-colors"
+                className="flex-shrink-0 w-72 sm:w-80 lg:w-96 bg-neutral-gray-dark border border-neutral-gray-light rounded-lg p-4 sm:p-6 transition-all duration-300"
+                whileHover={{
+                  borderColor: '#8B5CF6',
+                  scale: 1.02,
+                  y: -4
+                }}
+                whileDrag={{ scale: 0.98 }}
               >
                 {/* Quote */}
                 <blockquote className="text-sm text-neutral-white/90 leading-relaxed mb-4 italic">
@@ -99,9 +159,9 @@ export function Testimonials({ className }: TestimonialsProps) {
                   {[...Array(5)].map((_, starIndex) => (
                     <Star
                       key={starIndex}
-                      className={`w-4 h-4 ${starIndex < testimonial.rating
-                          ? "text-yellow-400 fill-yellow-400"
-                          : "text-neutral-gray-light"
+                      className={`w-4 h-4 transition-colors ${starIndex < testimonial.rating
+                        ? "text-yellow-400 fill-yellow-400"
+                        : "text-neutral-gray-light"
                         }`}
                     />
                   ))}
@@ -134,10 +194,12 @@ export function Testimonials({ className }: TestimonialsProps) {
                     {testimonial.projectType}
                   </span>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
+
+        
 
         {/* Impact Metrics */}
         <motion.div
