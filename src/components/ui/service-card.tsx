@@ -57,7 +57,7 @@ export function ServiceCard({
 
       {/* Price */}
       <div className="mb-6 mt-auto">
-        <span className="text-sm text-neutral-white/60">Precio desde:</span>
+        <span className="text-sm text-neutral-white/60">Planes desde:</span>
         <div className="text-price text-2xl font-bold">{price}</div>
       </div>
 

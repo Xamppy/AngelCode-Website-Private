@@ -107,7 +107,7 @@ export function Testimonials({ className }: TestimonialsProps) {
           </p>
         </motion.div>
 
-       
+
 
         {/* Draggable Infinite Scroll Testimonials */}
         <motion.div
@@ -198,7 +198,7 @@ export function Testimonials({ className }: TestimonialsProps) {
           </motion.div>
         </motion.div>
 
-        
+
 
         {/* Impact Metrics */}
         <motion.div

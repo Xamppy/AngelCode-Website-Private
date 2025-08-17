@@ -14,52 +14,52 @@ const services = [
   {
     id: 'software',
     icon: Code,
-    title: 'Desarrollo de Software',
-    description: 'Creamos aplicaciones web, móviles y de escritorio personalizadas que se adaptan perfectamente a las necesidades de tu negocio.',
+    title: 'Páginas Web & E-commerce',
+    description: 'Creamos páginas web profesionales y tiendas online que hacen crecer tu negocio.',
     features: [
-      'Apps web y móviles',
-      'Sistemas empresariales',
-      'APIs y microservicios',
-      'Integración con sistemas existentes'
+      'Landing pages',
+      'Tiendas online con Webpay',
+      'Catálogos de productos',
+      'Integración con redes sociales'
     ],
     price: '$200.000'
   },
   {
     id: 'ai',
     icon: Bot,
-    title: 'Integración de IA',
-    description: 'Implementamos soluciones de inteligencia artificial para automatizar procesos y mejorar la toma de decisiones en tu empresa.',
+    title: 'Sistemas para Negocios',
+    description: 'Desarrollamos sistemas simples y personalizados para que administres mejor tu negocio.',
     features: [
-      'Chatbots empresariales',
-      'Automatización inteligente',
-      'Análisis predictivo',
-      'Procesamiento de lenguaje natural'
+      'Sistemas POS para ventas',
+      'Reservas de horas online',
+      'Control de inventario',
+      'Integración con medios de pago'
     ],
-    price: '$400.000'
+    price: '$250.000'
   },
   {
     id: 'devops',
     icon: Settings,
-    title: 'DevOps & Automatización',
-    description: 'Optimizamos tus procesos de desarrollo y despliegue con herramientas modernas de DevOps y automatización.',
+    title: 'Mantenimiento & Soporte',
+    description: 'Mantenemos tu web o sistema siempre actualizado, seguro y funcionando al 100%.',
     features: [
-      'CI/CD pipelines',
-      'Infraestructura como código',
-      'Monitoreo y alertas',
-      'Contenedorización con Docker'
+      'Hosting y dominios',
+      'Seguridad y respaldos',
+      'Optimización de velocidad',
+      'Actualizaciones técnicas'
     ],
-    price: '$300.000'
+    price: '$50.000/mes'
   },
   {
     id: 'consulting',
     icon: Database,
-    title: 'Consultoría Tecnológica',
-    description: 'Te ayudamos a definir la mejor estrategia tecnológica para tu empresa y a migrar sistemas legacy a tecnologías modernas.',
+    title: 'Automatización Inteligente',
+    description: 'Implementamos chatbots y automatizaciones para ahorrar tiempo y mejorar la atención de tus clientes.',
     features: [
-      'Auditoría de sistemas',
-      'Arquitectura de soluciones',
-      'Migración de aplicaciones',
-      'Optimización de rendimiento'
+      'Chatbots en WhatsApp y web',
+      'Automatización de tareas repetitivas',
+      'Reportes básicos de ventas',
+      'Recordatorios automáticos para clientes'
     ],
     price: '$150.000'
   }
