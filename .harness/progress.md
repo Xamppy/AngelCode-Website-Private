@@ -33,4 +33,6 @@
 
 **Build:** ✅ npm run build exitoso
 
+**Git config:** user.name → Xamppy / email → fe.orellanaa@duocuc.cl
+
 **Próximas pendientes:** SEO-003 (blog), UX-004 (contraste WCAG), TECH-004 (background-attachment mobile)
