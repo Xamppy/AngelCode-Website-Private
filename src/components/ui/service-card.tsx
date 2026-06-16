@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { LucideIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
@@ -10,6 +11,7 @@ interface ServiceCardProps {
   description: string
   features: string[]
   price: string
+  href?: string
   onRequestQuote: () => void
   className?: string
 }
@@ -20,10 +22,11 @@ export function ServiceCard({
   description,
   features,
   price,
+  href,
   onRequestQuote,
   className
 }: ServiceCardProps) {
-  return (
+  const CardContent = (
     <motion.div 
       className={cn("card group h-full flex flex-col", className)}
       whileHover={{ 
@@ -61,13 +64,25 @@ export function ServiceCard({
         <div className="text-price text-2xl font-bold">{price}</div>
       </div>
 
-      {/* CTA Button */}
-      <button
-        onClick={onRequestQuote}
-        className="w-full btn-primary group-hover:shadow-lg transition-all duration-200 mt-auto"
-      >
-        Solicitar Presupuesto
-      </button>
+      {/* Actions */}
+      <div className="space-y-2 mt-auto">
+        {href && (
+          <Link
+            href={href}
+            className="block w-full text-center text-sm text-purple-light hover:text-purple-primary transition-colors py-2 border border-purple-primary/30 rounded-lg hover:border-purple-primary/60"
+          >
+            Ver más detalles →
+          </Link>
+        )}
+        <button
+          onClick={onRequestQuote}
+          className="w-full btn-primary group-hover:shadow-lg transition-all duration-200"
+        >
+          Solicitar Presupuesto
+        </button>
+      </div>
     </motion.div>
   )
+
+  return CardContent
 }

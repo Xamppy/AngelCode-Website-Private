@@ -13,10 +13,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<{ success
   const templateParams = {
     from_name: data.name,
     from_email: data.email,
-    company: data.company,
-    phone: data.phone || 'No proporcionado',
     project_type: data.projectType,
-    budget: data.budget,
     message: data.message,
     to_email: 'felipe@angelcodesoluciones.com'
   }

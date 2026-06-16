@@ -100,8 +100,7 @@ export function Contact({ className }: ContactProps) {
             ¿Listo para Transformar tu Negocio?
           </h2>
           <p className="body-large max-w-3xl mx-auto text-neutral-white/80">
-            Agenda una consulta gratuita de 30 minutos y descubre cómo podemos
-            llevar tu proyecto al siguiente nivel con tecnología de vanguardia.
+            Cuéntanos tu proyecto y te enviaremos una cotización personalizada.
           </p>
         </div>
 
@@ -133,54 +132,19 @@ export function Contact({ className }: ContactProps) {
               {/* Email */}
               <div>
                 <label htmlFor="email" className="form-label">
-                  Email corporativo *
+                  Email *
                 </label>
                 <input
                   {...register('email')}
                   id="email"
                   type="email"
                   className="form-input"
-                  placeholder="tu@empresa.com"
+                  placeholder="tu@email.com"
                   aria-describedby={errors.email ? "email-error" : undefined}
                   aria-invalid={errors.email ? "true" : "false"}
                 />
                 {errors.email && (
                   <p id="email-error" className="form-error" role="alert">{errors.email.message}</p>
-                )}
-              </div>
-
-              {/* Company */}
-              <div>
-                <label htmlFor="company" className="form-label">
-                  Empresa *
-                </label>
-                <input
-                  {...register('company')}
-                  id="company"
-                  type="text"
-                  className="form-input"
-                  placeholder="Nombre de tu empresa"
-                  aria-describedby={errors.company ? "company-error" : undefined}
-                  aria-invalid={errors.company ? "true" : "false"}
-                />
-                {errors.company && (
-                  <p id="company-error" className="form-error" role="alert">{errors.company.message}</p>
-                )}
-              </div>
-
-              {/* Phone */}
-              <div>
-                <label className="form-label">
-                  Teléfono
-                </label>
-                <input
-                  {...register('phone')}
-                  type="tel"
-                  className="form-input"
-                  placeholder="+56 9 1234 5678"
-                />
-                {errors.phone && (
-                  <p className="form-error">{errors.phone.message}</p>
                 )}
               </div>
 
@@ -194,46 +158,26 @@ export function Contact({ className }: ContactProps) {
                   className="form-input"
                 >
                   <option value="">Selecciona un tipo de proyecto</option>
-                  <option value="software">Desarrollo de Software</option>
-                  <option value="ai">Integración de IA</option>
-                  <option value="devops">DevOps & Automatización</option>
-                  <option value="other">Otro (especificar en mensaje)</option>
+                  <option value="software">Páginas Web & E-commerce</option>
+                  <option value="ai">Sistemas para Negocios</option>
+                  <option value="devops">Mantenimiento & Soporte</option>
+                  <option value="other">Automatización / Otro</option>
                 </select>
                 {errors.projectType && (
                   <p className="form-error">{errors.projectType.message}</p>
                 )}
               </div>
 
-              {/* Budget */}
-              <div>
-                <label className="form-label">
-                  Presupuesto estimado *
-                </label>
-                <select
-                  {...register('budget')}
-                  className="form-input"
-                >
-                  <option value="">Selecciona un rango de presupuesto</option>
-                  <option value="200k-300k">$200.000 - $300.000</option>
-                  <option value="400k-600k">$400.000 - $600.000</option>
-                  <option value="700k-900k">$700.000 - $900.000</option>
-                  <option value="1000k+">+$1.000.000</option>
-                </select>
-                {errors.budget && (
-                  <p className="form-error">{errors.budget.message}</p>
-                )}
-              </div>
-
               {/* Message */}
               <div>
                 <label className="form-label">
-                  Mensaje/Requerimientos *
+                  Cuéntanos tu proyecto *
                 </label>
                 <textarea
                   {...register('message')}
                   rows={4}
                   className="form-input resize-none"
-                  placeholder="Cuéntanos más detalles sobre tu proyecto, objetivos y requerimientos específicos..."
+                  placeholder="¿Qué necesitas? Cuéntanos tu idea, objetivos y requerimientos..."
                 />
                 {errors.message && (
                   <p className="form-error">{errors.message.message}</p>

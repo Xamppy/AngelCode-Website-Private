@@ -1,77 +1,28 @@
 'use client'
 
-import { Code, Bot, Settings, Database } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { ServiceCard } from '@/components/ui/service-card'
 import { scrollToSection } from '@/lib/scroll'
 import { useScrollAnimation } from '@/lib/hooks'
+import services from '@/data/services'
 
 interface ServicesProps {
   className?: string
 }
-
-const services = [
-  {
-    id: 'software',
-    icon: Code,
-    title: 'Páginas Web & E-commerce',
-    description: 'Creamos páginas web profesionales y tiendas online que hacen crecer tu negocio.',
-    features: [
-      'Landing pages',
-      'Tiendas online con Webpay',
-      'Catálogos de productos',
-      'Integración con redes sociales'
-    ],
-    price: '$200.000'
-  },
-  {
-    id: 'ai',
-    icon: Bot,
-    title: 'Sistemas para Negocios',
-    description: 'Desarrollamos sistemas simples y personalizados para que administres mejor tu negocio.',
-    features: [
-      'Sistemas POS para ventas',
-      'Reservas de horas online',
-      'Control de inventario',
-      'Integración con medios de pago'
-    ],
-    price: '$250.000'
-  },
-  {
-    id: 'devops',
-    icon: Settings,
-    title: 'Mantenimiento & Soporte',
-    description: 'Mantenemos tu web o sistema siempre actualizado, seguro y funcionando al 100%.',
-    features: [
-      'Hosting y dominios',
-      'Seguridad y respaldos',
-      'Optimización de velocidad',
-      'Actualizaciones técnicas'
-    ],
-    price: '$50.000/mes'
-  },
-  {
-    id: 'consulting',
-    icon: Database,
-    title: 'Automatización Inteligente',
-    description: 'Implementamos chatbots y automatizaciones para ahorrar tiempo y mejorar la atención de tus clientes.',
-    features: [
-      'Chatbots en WhatsApp y web',
-      'Automatización de tareas repetitivas',
-      'Reportes básicos de ventas',
-      'Recordatorios automáticos para clientes'
-    ],
-    price: '$150.000'
-  }
-]
 
 export function Services({ className }: ServicesProps) {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation()
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation()
 
   const handleRequestQuote = (serviceId: string) => {
-    // Store selected service in localStorage for the contact form
-    localStorage.setItem('selectedService', serviceId)
+    // Map old IDs for backward compat with contact form
+    const idMap: Record<string, string> = {
+      'web-development': 'software',
+      'business-systems': 'ai',
+      'maintenance-support': 'devops',
+      'automation': 'other',
+    }
+    localStorage.setItem('selectedService', idMap[serviceId] || serviceId)
     scrollToSection('contact')
   }
 
@@ -120,6 +71,7 @@ export function Services({ className }: ServicesProps) {
                 description={service.description}
                 features={service.features}
                 price={service.price}
+                href={`/servicios/${service.id}`}
                 onRequestQuote={() => handleRequestQuote(service.id)}
               />
             </motion.div>
