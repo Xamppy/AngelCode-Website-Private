@@ -46,8 +46,8 @@ export function Hero({ className }: HeroProps) {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/background-image.png"
-            alt="Pixel art mountain background with purple gradient overlay for Angel Code Soluciones website"
+            src="/images/hero-bg.webp"
+            alt="Background showing technology solutions and purple gradient for Angel Code Soluciones"
             fill
             className="object-cover object-center"
             priority
