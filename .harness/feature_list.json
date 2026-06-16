@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-06-16",
+  "features": [
+    {
+      "id": "SEO-001",
+      "category": "seo",
+      "description": "SEO metadata completo (OG, Twitter, JSON-LD multi-graph)",
+      "status": "done",
+      "location": "src/app/layout.tsx",
+      "completedAt": "2026-06-01"
+    },
+    {
+      "id": "SEO-002",
+      "category": "seo",
+      "description": "next-sitemap + robots.txt + manifest.json",
+      "status": "done",
+      "location": "next-sitemap.config.js, public/",
+      "completedAt": "2026-06-01"
+    },
+    {
+      "id": "SEO-003",
+      "category": "seo",
+      "description": "Structured data JSON-LD con Organization + WebSite + WebPage + Services",
+      "status": "done",
+      "location": "src/components/seo/structured-data.tsx",
+      "completedAt": "2026-06-01"
+    },
+    {
+      "id": "SEO-004",
+      "category": "seo",
+      "description": "Crear subpaginas /servicios/[slug] y /proyectos/[slug]",
+      "status": "pending",
+      "location": "src/app/servicios/, src/app/proyectos/",
+      "notes": "Multiplica contenido indexable"
+    },
+    {
+      "id": "SEO-005",
+      "category": "seo",
+      "description": "FAQPage structured data para rich snippets",
+      "status": "pending",
+      "location": "src/components/seo/"
+    },
+    {
+      "id": "SEO-006",
+      "category": "seo",
+      "description": "Marcar testimonios con schema Review",
+      "status": "pending",
+      "location": "src/components/sections/testimonials.tsx"
+    },
+    {
+      "id": "TECH-001",
+      "category": "tech",
+      "description": "Eliminar @import duplicados de Google Fonts en globals.css",
+      "status": "done",
+      "location": "src/app/globals.css",
+      "completedAt": "2026-06-16"
+    },
+    {
+      "id": "TECH-002",
+      "category": "tech",
+      "description": "Agregar CSP headers en vercel.json",
+      "status": "pending",
+      "location": "vercel.json"
+    },
+    {
+      "id": "TECH-003",
+      "category": "tech",
+      "description": "Fix hero-background falta extension .png en globals.css",
+      "status": "pending",
+      "location": "src/app/globals.css"
+    },
+    {
+      "id": "TECH-004",
+      "category": "tech",
+      "description": "Fix background-attachment fixed en mobile (causa jank)",
+      "status": "pending",
+      "location": "src/app/globals.css"
+    },
+    {
+      "id": "UX-001",
+      "category": "ux",
+      "description": "Agregar boton WhatsApp flotante",
+      "status": "pending",
+      "location": "src/components/"
+    },
+    {
+      "id": "UX-002",
+      "category": "ux",
+      "description": "Acortar formulario de contacto a 3 campos",
+      "status": "pending",
+      "location": "src/components/sections/contact.tsx"
+    },
+    {
+      "id": "UX-003",
+      "category": "ux",
+      "description": "Pagina 404 personalizada con CTAs",
+      "status": "pending",
+      "location": "src/app/not-found.tsx"
+    },
+    {
+      "id": "UX-004",
+      "category": "ux",
+      "description": "Boton Volver arriba (FAB)",
+      "status": "pending",
+      "location": "src/components/"
+    }
+  ]
+}
