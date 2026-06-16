@@ -1,41 +1,36 @@
-# Progress - Registro de Sesiones
+# Progress — Registro de Sesiones
 
 ---
 
 ## Registro de Sesiones
 
-### Sesion: 2026-06-16 - Fase 1: Fundacion del Portfolio
-**Tareas completadas**:
-- Creado src/data/projects.ts con 8 proyectos (MotoForAll, Podoclinic, Retorno Seguro, Minimarket Mayorista, KineSW, EstetikFlow, CineMatch, Minimarket Almacen)
-- Refactorizado projects.tsx para leer desde data/projects.ts en vez de hardcodear
-- Build verificado (npm run build -> OK)
+### Sesión: 2026-06-16 — Fase 1: Fundación del Portfolio
+**Completado:** data layer, refactor projects, filtro industria
+**Issues:** Claude Code con --max-turns 5 fue insuficiente
 
-**Proximos pasos (Fase 1)**:
-- Disenar nuevas ProjectCards con badges de tecnologias
-- Agregar filtro por categoria/industria
-- Link a repos/demos
+### Sesión: 2026-06-16 — Fase 2 + 3 (parcial)
+**Completado:** /proyectos/[slug], 404 custom, WhatsApp flotante
 
-**Issues**:
-- Claude Code con --max-turns 5 fue insuficiente (uso directo de patch tool)
+### Sesión: 2026-06-16 — Sprint SDD
+**Features completadas:**
+- PAGE-002: /servicios/[slug] con data layer + 4 subpáginas
+- UX-002: Formulario contacto acortado (8 → 4 campos)
+- UX-003: Botón Volver Arriba con Framer Motion
+- SEO-001: FAQ Schema JSON-LD (8 preguntas)
+- SEO-002: Review Schema JSON-LD (3 reseñas)
+- TECH-002: CSP + headers de seguridad
+- TECH-003: Hero bg PNG 2.3MB → WebP 142KB
 
-### Sesion: 2026-06-16 - Fase 1: Filtro + ProjectCards mejoradas
-**Tareas completadas**:
-- Filtro por industria en seccion de proyectos (PORTFOLIO-003)
-- Status badge en cada ProjectCard (En Vivo, En Desarrollo, Completado, Prototipo)
-- Links a Demo y Repo por proyecto
-- Iconos de industria actualizados (Transporte, Entretenimiento)
-- Build verificado
+**SDD Framework implementado:**
+- SDD-001: .ATL/skill_registry.md — índice de skills
+- SDD-002: openspec.yaml — configuración del proyecto
+- SDD-003: engram/engram.py — memoria persistente SQLite
+- SDD-004: specs/ — estructura de fases
+- SDD-005: specs/prompts/sdd-prompts.md — prompts Fase 0-6
+- SDD-006: AGENTS.md actualizado con índice SDD
+- SDD-007: .harness/PROMPT.md + AGENT.md integrados
+- SDD-008: CLAUDE.md actualizado
 
-**Pendientes**: Fase 2 (subpaginas), Fase 3 (WhatsApp, 404, formulario), etc.
+**Build:** ✅ npm run build exitoso
 
-
-### Sesion: 2026-06-16 - Fase 2 + 3 (parcial)
-**Tareas completadas**:
-- Subpagina /proyectos/[slug] con SEO dinamico (PAGE-001)
-- Pagina 404 personalizada con CTAs (PAGE-003)
-- Build verificado
-
-**Pendientes**: /servicios/[slug], WhatsApp flotante, acortar formulario, FAQ Schema, CSP
-
-### Sesion: 2026-06-16 - UX mejoras
-**Completado**: WhatsApp flotante (UX-001) + 404 custom (PAGE-003)
+**Próximas pendientes:** SEO-003 (blog), UX-004 (contraste WCAG), TECH-004 (background-attachment mobile)

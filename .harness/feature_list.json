@@ -148,9 +148,10 @@
       "id": "PAGE-002",
       "category": "pages",
       "description": "Subpagina /servicios/[slug] con detalle individual",
-      "status": "pending",
+      "status": "done",
       "priority": "alta",
-      "location": "src/app/servicios/[slug]/page.tsx"
+      "location": "src/app/servicios/[slug]/page.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "PAGE-003",
@@ -174,17 +175,19 @@
       "id": "UX-002",
       "category": "ux",
       "description": "Acortar formulario contacto a campos esenciales",
-      "status": "pending",
+      "status": "done",
       "priority": "alta",
-      "location": "src/components/sections/contact.tsx"
+      "location": "src/components/sections/contact.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "UX-003",
       "category": "ux",
       "description": "Boton Volver arriba (FAB)",
-      "status": "pending",
+      "status": "done",
       "priority": "media",
-      "location": "src/components/ui/scroll-to-top.tsx"
+      "location": "src/components/ui/scroll-to-top.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "UX-004",
@@ -198,17 +201,19 @@
       "id": "SEO-001",
       "category": "seo",
       "description": "FAQPage structured data para rich snippets",
-      "status": "pending",
+      "status": "done",
       "priority": "media",
-      "location": "src/components/seo/structured-data.tsx"
+      "location": "src/components/seo/structured-data.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "SEO-002",
       "category": "seo",
       "description": "Marcar testimonios con schema Review",
-      "status": "pending",
+      "status": "done",
       "priority": "media",
-      "location": "src/components/sections/testimonials.tsx"
+      "location": "src/components/sections/testimonials.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "SEO-003",
@@ -229,16 +234,18 @@
       "id": "TECH-002",
       "category": "tech",
       "description": "CSP headers en vercel.json",
-      "status": "pending",
-      "priority": "media"
+      "status": "done",
+      "priority": "media",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "TECH-003",
       "category": "tech",
       "description": "Fix hero-background falta extension .png en globals.css",
-      "status": "pending",
+      "status": "done",
       "priority": "media",
-      "location": "src/app/globals.css"
+      "location": "src/app/globals.css",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "TECH-004",
@@ -260,6 +267,78 @@
       "category": "harness",
       "description": "CLAUDE.md para contexto de Claude Code",
       "status": "done",
+      "completedAt": "2026-06-16"
+    },
+    {
+      "id": "SDD-001",
+      "category": "sdd",
+      "description": "Skill Registry (.ATL/skill_registry.md) para subagentes",
+      "status": "done",
+      "priority": "alta",
+      "location": ".ATL/skill_registry.md",
+      "completedAt": "2026-06-16"
+    },
+    {
+      "id": "SDD-002",
+      "category": "sdd",
+      "description": "openspec.yaml con configuracion del proyecto",
+      "status": "done",
+      "priority": "alta",
+      "location": "openspec.yaml",
+      "completedAt": "2026-06-16"
+    },
+    {
+      "id": "SDD-003",
+      "category": "sdd",
+      "description": "Engram: memoria persistente SQLite con CLI",
+      "status": "done",
+      "priority": "alta",
+      "location": "engram/engram.py",
+      "completedAt": "2026-06-16"
+    },
+    {
+      "id": "SDD-004",
+      "category": "sdd",
+      "description": "Estructura specs/ con fases (proposals, designs, tasks, reports)",
+      "status": "done",
+      "priority": "alta",
+      "location": "specs/",
+      "completedAt": "2026-06-16"
+    },
+    {
+      "id": "SDD-005",
+      "category": "sdd",
+      "description": "Prompts SDD para orquestador (Fase 0-6)",
+      "status": "done",
+      "priority": "alta",
+      "location": "specs/prompts/sdd-prompts.md",
+      "completedAt": "2026-06-16"
+    },
+    {
+      "id": "SDD-006",
+      "category": "sdd",
+      "description": "AGENTS.md actualizado con indice SDD",
+      "status": "done",
+      "priority": "alta",
+      "location": "AGENTS.md",
+      "completedAt": "2026-06-16"
+    },
+    {
+      "id": "SDD-007",
+      "category": "sdd",
+      "description": ".harness/PROMPT.md y AGENT.md integrados con SDD",
+      "status": "done",
+      "priority": "alta",
+      "location": ".harness/",
+      "completedAt": "2026-06-16"
+    },
+    {
+      "id": "SDD-008",
+      "category": "sdd",
+      "description": "CLAUDE.md actualizado con referencias SDD",
+      "status": "done",
+      "priority": "alta",
+      "location": "CLAUDE.md",
       "completedAt": "2026-06-16"
     }
   ]

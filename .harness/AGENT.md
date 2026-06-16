@@ -1,6 +1,6 @@
-# AGENT.md - Como Correr AngelCode Website
+# AGENT.md — Cómo Correr AngelCode Website
 
-> Este archivo es leido por el agente al inicio de cada sesion.
+> Este archivo es leído por el agente al inicio de cada sesión.
 > Contiene TODO lo necesario para levantar y trabajar en el proyecto.
 
 ---
@@ -8,79 +8,49 @@
 ## Setup Inicial (una vez)
 
 ```bash
-cd /root/angelcode-test
+cd /root/angelcode-website
 npm install
-cp .env.example .env.local  # Configurar variables de entorno
 ```
 
-## Variables de Entorno Requeridas
+## Variables de Entorno
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://angelcodesoluciones.cl
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
 NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-## Correr el Proyecto
+Variables en `.env.production` para producción.
+
+## Comandos
 
 ```bash
-# Desarrollo
-npm run dev
-# -> http://localhost:3000
-
-# Build (SIEMPRE antes de commit)
-npm run build
-
-# Lint
-npm run lint
+npm run dev              # Servidor desarrollo → localhost:3000
+npm run build            # Build (OBLIGATORIO antes de commit)
+npm run build:production # Build producción + sitemap
+npm run lint             # ESLint
 ```
 
-## Stack
+## Skills del Agente
 
-- **Framework:** Next.js 14.2 App Router
-- **Lenguaje:** TypeScript (strict mode)
-- **Estilos:** Tailwind CSS 3.4 con diseno personalizado
-- **Animaciones:** Framer Motion
-- **Formularios:** React Hook Form + Zod v4
-- **Email:** EmailJS
-- **Iconos:** Lucide React
-- **Analytics:** Vercel Analytics
-- **SEO:** next-sitemap, JSON-LD structured data
-- **Deploy:** Vercel
+Skills disponibles en `.ATL/skill_registry.md`
+Cargar con: `skill_view(name="nombre-skill")`
 
-## Estructura del Proyecto
+## Memoria Persistente (Engram)
 
-```
-src/
-  app/               # App Router
-    globals.css      # Estilos globales
-    layout.tsx       # Layout principal (metadata SEO)
-    page.tsx         # Landing page (Hero + Services + Projects + Process + Testimonials + Contact)
-  components/
-    ui/              # Componentes reutilizables (navigation, service-card, image-gallery)
-    sections/        # Secciones (hero, services, projects, process, testimonials, contact)
-    seo/             # Componentes SEO (structured-data)
-  lib/               # Utilidades y hooks (validations, email, hooks, utils, scroll)
+```bash
+python3 engram/engram.py recent --limit 5
+python3 engram/engram.py query --tag TEMA
+python3 engram/engram.py search "término"
+python3 engram/engram.py add decision "Pregunta" "Razón" "Ubicación" tags
+python3 engram/engram.py add bug "Problema" "Causa" "Solución" tags
+python3 engram/engram.py add learning "Contexto" "Insight" "Fuente" tags
 ```
 
-## Reglas de Oro
+## Documentación SDD
 
-1. **UNA feature a la vez** - No trabajar en multiples features simultaneas
-2. **SIEMPRE hacer `npm run build`** antes de marcar como done
-3. **Leer `.harness/feature_list.json`** para ver el estado actual
-4. **Commits descriptivos** en espanol: `feat: descripcion` o `fix: descripcion`
-5. **Si hay duda, preguntar al usuario antes de implementar**
-
-## Ponytail Mode
-
-Este proyecto usa ponytail (lazy senior dev mode). Antes de escribir codigo, revisar:
-1. YAGNI - realmente necesito esto?
-2. Stdlib lo hace? usarlo
-3. Native platform feature? usarla
-4. Dependencia instalada? usarla
-5. Puede ser una linea? hacerlo una linea
-6. Solo entonces: el minimo codigo que funciona
-
-Marcar simplificaciones con comentario `ponytail:`.
-NO ser lazy con: validacion de input, prevencion de perdida de datos, seguridad, accesibilidad.
+- `specs/prompts/sdd-prompts.md` — Prompts del orquestador (Fases 0-6)
+- `specs/proposals/` — Propuestas de features
+- `specs/designs/` — Diseños técnicos
+- `specs/tasks/` — Tareas planificadas
+- `specs/reports/` — Reportes de verificación y finales

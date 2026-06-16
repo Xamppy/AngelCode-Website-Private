@@ -1,0 +1,73 @@
+# OpenSpec — Configuración del Proyecto
+
+project:
+  name: Angel Code Soluciones
+  slug: angelcode-website
+  url: https://angelcodesoluciones.cl
+  repo: https://github.com/Xamppy/AngelCode-Website-Private
+  language: es-CL
+  type: website
+
+stack:
+  framework: next.js@14.2.30
+  language: typescript@5.x (strict)
+  styles: tailwindcss@3.4.1 + css-custom-properties
+  animations: framer-motion@12.23.12
+  forms: react-hook-form@7.61.1 + zod@4.0.14
+  email: emailjs@4.4.1
+  icons: lucide-react@0.534.0
+  notifications: react-hot-toast@2.5.2
+  analytics: @vercel/analytics@1.5.0
+  deploy: vercel
+  seo: next-sitemap@4.2.3
+
+paths:
+  source: src/
+  tests: ""  # No hay tests unitarios aún
+  public: public/
+  styles: src/app/globals.css
+  components: src/components/
+  sections: src/components/sections/
+  ui: src/components/ui/
+  seo: src/components/seo/
+  data: src/data/
+  lib: src/lib/
+  types: src/types/
+  harness: .harness/
+  atl: .ATL/
+  engram: engram/
+  specs: specs/
+  docs: docs/
+
+commands:
+  dev: npm run dev
+  build: npm run build
+  build_prod: npm run build:production
+  lint: npm run lint
+  sitemap: npm run postbuild
+  preview: npm run preview
+
+conventions:
+  - theme: dark-mode (bg #0A0A0A)
+  - primary_color: "#8B5CF6" (purple)
+  - mobile_first: true
+  - type_safety: strict
+  - images: webp/avif via next/image
+  - components: use client only when needed
+  - seo: metadata export + JSON-LD structured data
+  - commit_style: "tipo: descripción en español"
+  - pre_commit: npm run build
+
+environments:
+  production: https://angelcodesoluciones.cl
+  preview: vercel preview deployments
+
+features:
+  - single_page: true
+  - sections: [hero, services, projects, process, testimonials, contact]
+  - subpages: [/proyectos/[slug], /servicios/[slug]]
+  - whatsapp_button: true
+  - seo_schema: [Organization, WebSite, WebPage, Service, FAQPage, Review]
+  - contact_form: true
+  - calendly_integration: true
+  - analytics: true
