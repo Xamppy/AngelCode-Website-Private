@@ -1,109 +1,260 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "lastUpdated": "2026-06-16",
+  "projects": [
+    {
+      "id": "angelcode-website",
+      "name": "Angel Code Soluciones - Web Corporativa",
+      "status": "live",
+      "url": "https://angelcodesoluciones.cl",
+      "repo": "Xamppy/AngelCode-Website-Private",
+      "stack": [
+        "Next.js 14",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "EmailJS"
+      ],
+      "industry": "Servicios tecnologicos"
+    },
+    {
+      "id": "motoforall",
+      "name": "MotoForAll - E-commerce Motos",
+      "status": "development",
+      "repo": "Xamppy/motoforall",
+      "stack": [
+        "Next.js",
+        "Drizzle ORM",
+        "PostgreSQL",
+        "NextAuth",
+        "Tailwind"
+      ],
+      "industry": "E-commerce"
+    },
+    {
+      "id": "podoclinic-saas",
+      "name": "Podoclinic SaaS - Booking Clinico",
+      "status": "done",
+      "repo": "Xamppy/podoclinic-saas",
+      "stack": [
+        "Next.js",
+        "Django REST",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "industry": "Salud"
+    },
+    {
+      "id": "estetikflow-landing",
+      "name": "EstetikFlow - Landing Page",
+      "status": "done",
+      "repo": "Xamppy/estetikflow-landing",
+      "stack": [
+        "Next.js",
+        "Tailwind",
+        "Framer Motion"
+      ],
+      "industry": "Salud"
+    },
+    {
+      "id": "retorno-seguro",
+      "name": "Retorno Seguro Chile",
+      "status": "live",
+      "url": "https://retornosegurochile.com",
+      "repo": "Xamppy/Retorno_Seguro",
+      "stack": [
+        "React 19",
+        "Vite 6",
+        "TypeScript",
+        "Tailwind",
+        "Google Maps",
+        "Vercel Edge"
+      ],
+      "industry": "Transporte"
+    },
+    {
+      "id": "minimarket-mayorista",
+      "name": "Minimarket Mayorista - POS",
+      "status": "development",
+      "repo": "Xamppy/minimarket-mayorista",
+      "stack": [
+        "Next.js",
+        "Supabase",
+        "PostgreSQL",
+        "Tailwind"
+      ],
+      "industry": "Retail"
+    },
+    {
+      "id": "kinesw",
+      "name": "Sistema Kinesiologico Deportivo",
+      "status": "done",
+      "repo": "Xamppy/KineSW",
+      "stack": [
+        "React",
+        "Django",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "industry": "Salud deportiva"
+    },
+    {
+      "id": "cinematch",
+      "name": "CineMatch",
+      "status": "prototype",
+      "repo": "Xamppy/CineMatch",
+      "stack": [],
+      "industry": "Entretenimiento"
+    }
+  ],
   "features": [
+    {
+      "id": "PORTFOLIO-001",
+      "category": "portfolio",
+      "description": "Fuente de datos centralizada para proyectos (src/data/projects.ts)",
+      "status": "pending",
+      "priority": "alta",
+      "location": "src/data/projects.ts"
+    },
+    {
+      "id": "PORTFOLIO-002",
+      "category": "portfolio",
+      "description": "Refactorizar Projects.tsx para leer desde datos, no hardcodear",
+      "status": "pending",
+      "priority": "alta",
+      "location": "src/components/sections/projects.tsx"
+    },
+    {
+      "id": "PORTFOLIO-003",
+      "category": "portfolio",
+      "description": "Filtro por categoria/industria en proyectos",
+      "status": "pending",
+      "priority": "media",
+      "location": "src/components/sections/projects.tsx"
+    },
+    {
+      "id": "PAGE-001",
+      "category": "pages",
+      "description": "Subpagina /proyectos/[slug] con detalle individual",
+      "status": "pending",
+      "priority": "alta",
+      "location": "src/app/proyectos/[slug]/page.tsx"
+    },
+    {
+      "id": "PAGE-002",
+      "category": "pages",
+      "description": "Subpagina /servicios/[slug] con detalle individual",
+      "status": "pending",
+      "priority": "alta",
+      "location": "src/app/servicios/[slug]/page.tsx"
+    },
+    {
+      "id": "PAGE-003",
+      "category": "pages",
+      "description": "Pagina 404 personalizada con CTAs",
+      "status": "pending",
+      "priority": "media",
+      "location": "src/app/not-found.tsx"
+    },
+    {
+      "id": "UX-001",
+      "category": "ux",
+      "description": "Boton WhatsApp flotante con mensaje predefinido",
+      "status": "pending",
+      "priority": "alta",
+      "location": "src/components/ui/whatsapp-button.tsx"
+    },
+    {
+      "id": "UX-002",
+      "category": "ux",
+      "description": "Acortar formulario contacto a campos esenciales",
+      "status": "pending",
+      "priority": "alta",
+      "location": "src/components/sections/contact.tsx"
+    },
+    {
+      "id": "UX-003",
+      "category": "ux",
+      "description": "Boton Volver arriba (FAB)",
+      "status": "pending",
+      "priority": "media",
+      "location": "src/components/ui/scroll-to-top.tsx"
+    },
+    {
+      "id": "UX-004",
+      "category": "ux",
+      "description": "Mejorar contraste body text WCAG AA",
+      "status": "pending",
+      "priority": "baja",
+      "location": "src/app/globals.css"
+    },
     {
       "id": "SEO-001",
       "category": "seo",
-      "description": "SEO metadata completo (OG, Twitter, JSON-LD multi-graph)",
-      "status": "done",
-      "location": "src/app/layout.tsx",
-      "completedAt": "2026-06-01"
+      "description": "FAQPage structured data para rich snippets",
+      "status": "pending",
+      "priority": "media",
+      "location": "src/components/seo/structured-data.tsx"
     },
     {
       "id": "SEO-002",
       "category": "seo",
-      "description": "next-sitemap + robots.txt + manifest.json",
-      "status": "done",
-      "location": "next-sitemap.config.js, public/",
-      "completedAt": "2026-06-01"
+      "description": "Marcar testimonios con schema Review",
+      "status": "pending",
+      "priority": "media",
+      "location": "src/components/sections/testimonials.tsx"
     },
     {
       "id": "SEO-003",
       "category": "seo",
-      "description": "Structured data JSON-LD con Organization + WebSite + WebPage + Services",
-      "status": "done",
-      "location": "src/components/seo/structured-data.tsx",
-      "completedAt": "2026-06-01"
-    },
-    {
-      "id": "SEO-004",
-      "category": "seo",
-      "description": "Crear subpaginas /servicios/[slug] y /proyectos/[slug]",
+      "description": "Blog tecnico en /blog",
       "status": "pending",
-      "location": "src/app/servicios/, src/app/proyectos/",
-      "notes": "Multiplica contenido indexable"
-    },
-    {
-      "id": "SEO-005",
-      "category": "seo",
-      "description": "FAQPage structured data para rich snippets",
-      "status": "pending",
-      "location": "src/components/seo/"
-    },
-    {
-      "id": "SEO-006",
-      "category": "seo",
-      "description": "Marcar testimonios con schema Review",
-      "status": "pending",
-      "location": "src/components/sections/testimonials.tsx"
+      "priority": "baja",
+      "location": "src/app/blog/"
     },
     {
       "id": "TECH-001",
       "category": "tech",
-      "description": "Eliminar @import duplicados de Google Fonts en globals.css",
+      "description": "Eliminar @import duplicados Google Fonts en globals.css",
       "status": "done",
-      "location": "src/app/globals.css",
       "completedAt": "2026-06-16"
     },
     {
       "id": "TECH-002",
       "category": "tech",
-      "description": "Agregar CSP headers en vercel.json",
+      "description": "CSP headers en vercel.json",
       "status": "pending",
-      "location": "vercel.json"
+      "priority": "media"
     },
     {
       "id": "TECH-003",
       "category": "tech",
       "description": "Fix hero-background falta extension .png en globals.css",
       "status": "pending",
+      "priority": "media",
       "location": "src/app/globals.css"
     },
     {
       "id": "TECH-004",
       "category": "tech",
-      "description": "Fix background-attachment fixed en mobile (causa jank)",
+      "description": "Fix background-attachment fixed en mobile",
       "status": "pending",
+      "priority": "baja",
       "location": "src/app/globals.css"
     },
     {
-      "id": "UX-001",
-      "category": "ux",
-      "description": "Agregar boton WhatsApp flotante",
-      "status": "pending",
-      "location": "src/components/"
+      "id": "HARNESS-001",
+      "category": "harness",
+      "description": "Estructura .harness completa",
+      "status": "done",
+      "completedAt": "2026-06-16"
     },
     {
-      "id": "UX-002",
-      "category": "ux",
-      "description": "Acortar formulario de contacto a 3 campos",
-      "status": "pending",
-      "location": "src/components/sections/contact.tsx"
-    },
-    {
-      "id": "UX-003",
-      "category": "ux",
-      "description": "Pagina 404 personalizada con CTAs",
-      "status": "pending",
-      "location": "src/app/not-found.tsx"
-    },
-    {
-      "id": "UX-004",
-      "category": "ux",
-      "description": "Boton Volver arriba (FAB)",
-      "status": "pending",
-      "location": "src/components/"
+      "id": "HARNESS-002",
+      "category": "harness",
+      "description": "CLAUDE.md para contexto de Claude Code",
+      "status": "done",
+      "completedAt": "2026-06-16"
     }
   ]
 }
