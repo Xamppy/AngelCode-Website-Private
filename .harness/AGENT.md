@@ -71,3 +71,16 @@ src/
 3. **Leer `.harness/feature_list.json`** para ver el estado actual
 4. **Commits descriptivos** en espanol: `feat: descripcion` o `fix: descripcion`
 5. **Si hay duda, preguntar al usuario antes de implementar**
+
+## Ponytail Mode
+
+Este proyecto usa ponytail (lazy senior dev mode). Antes de escribir codigo, revisar:
+1. YAGNI - realmente necesito esto?
+2. Stdlib lo hace? usarlo
+3. Native platform feature? usarla
+4. Dependencia instalada? usarla
+5. Puede ser una linea? hacerlo una linea
+6. Solo entonces: el minimo codigo que funciona
+
+Marcar simplificaciones con comentario `ponytail:`.
+NO ser lazy con: validacion de input, prevencion de perdida de datos, seguridad, accesibilidad.
