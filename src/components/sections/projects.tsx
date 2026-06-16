@@ -6,158 +6,7 @@ import { ProjectCard } from '@/components/pixel-art/project-card'
 import { ProjectModal } from '@/components/pixel-art/project-modal'
 import { ImageGallery } from '@/components/ui/image-gallery'
 import { useScrollAnimation } from '@/lib/hooks'
-
-interface Technology {
-  name: string
-  icon: string
-}
-
-interface Achievement {
-  title: string
-  description: string
-  icon: string
-}
-
-interface Project {
-  id: string
-  title: string
-  description: string
-  stack: Technology[]
-  industry: string
-  timeline: string
-  roi: string
-  thumbnail: string
-  previewImage?: string
-  screenshots: string[]
-  architecture: string
-  achievements: Achievement[]
-}
-
-const projects: Project[] = [
-  {
-    id: 'podoclinic',
-    title: 'Sistema Podoclinic',
-    description: 'Sistema integral de gestión para clínica podológica que optimiza el manejo de pacientes, fichas clínicas, inventario y costos operacionales.',
-    stack: [
-      { name: 'React', icon: '⚛️' },
-      { name: 'Django', icon: '🐍' },
-      { name: 'PostgreSQL', icon: '🐘' },
-      { name: 'Docker', icon: '🐳' },
-      { name: 'Nginx', icon: '🌐' },
-      { name: 'Cloudflare', icon: '☁️' },
-      { name: 'CI/CD', icon: '🔄' },
-      { name: 'Bizagi', icon: '📋' }
-    ],
-    industry: 'Salud',
-    timeline: '2 meses',
-    roi: '+70% eficiencia',
-    thumbnail: '/images/projects/podoclinic.svg',
-    previewImage: '/images/projects/screenshots/podoclinic/1.webp',
-    screenshots: [
-      '/images/projects/screenshots/podoclinic/1.webp',
-      '/images/projects/screenshots/podoclinic/2.webp',
-      '/images/projects/screenshots/podoclinic/3.webp',
-      '/images/projects/screenshots/podoclinic/4.webp',
-      '/images/projects/screenshots/podoclinic/5.webp',
-      '/images/projects/screenshots/podoclinic/6.webp',
-      '/images/projects/screenshots/podoclinic/7.webp',
-      '/images/projects/screenshots/podoclinic/8.webp',
-      '/images/projects/screenshots/podoclinic/9.webp',
-      '/images/projects/screenshots/podoclinic/10.webp',
-      '/images/projects/screenshots/podoclinic/11.webp'
-    ],
-    architecture: 'Arquitectura de microservicios con frontend React, backend Django REST API, base de datos PostgreSQL, contenedorización con Docker y despliegue en la nube con Nginx como proxy reverso y Cloudflare para CDN y seguridad.',
-    achievements: [
-      { title: 'Eficiencia Mejorada', description: '70% mejora en gestión de pacientes', icon: '📈' },
-      { title: 'Automatización', description: 'Procesos manuales automatizados', icon: '🤖' },
-      { title: 'Satisfacción Cliente', description: '5 estrellas de satisfacción', icon: '⭐' }
-    ]
-  },
-  {
-    id: 'venta-mayorista',
-    title: 'Sistema de Venta Mayorista',
-    description: 'Plataforma completa de ventas mayoristas con gestión de inventario, clientes, pedidos y análisis de ventas en tiempo real.',
-    stack: [
-      { name: 'Next.js', icon: '▲' },
-      { name: 'TypeScript', icon: '📘' },
-      { name: 'Supabase', icon: '⚡' },
-      { name: 'PostgreSQL', icon: '🐘' },
-      { name: 'TailwindCSS', icon: '🎨' },
-      { name: 'CI/CD', icon: '🔄' },
-      { name: 'Bizagi', icon: '📋' }
-    ],
-    industry: 'Retail',
-    timeline: '2 meses',
-    roi: '+90% eficiencia',
-    thumbnail: '/images/projects/mayorista.svg',
-    previewImage: '/images/projects/screenshots/mayorista/1.webp',
-    screenshots: [
-      '/images/projects/screenshots/mayorista/1.webp',
-      '/images/projects/screenshots/mayorista/2.webp',
-      '/images/projects/screenshots/mayorista/3.webp',
-      '/images/projects/screenshots/mayorista/4.webp',
-      '/images/projects/screenshots/mayorista/5.webp',
-      '/images/projects/screenshots/mayorista/6.webp',
-      '/images/projects/screenshots/mayorista/7.webp',
-      '/images/projects/screenshots/mayorista/8.webp',
-      '/images/projects/screenshots/mayorista/9.webp',
-      '/images/projects/screenshots/mayorista/10.webp',
-      '/images/projects/screenshots/mayorista/11.webp'
-    ],
-    architecture: 'Aplicación full-stack con Next.js y TypeScript, backend serverless con Supabase, base de datos PostgreSQL, autenticación y autorización integrada, y procesos de negocio modelados con Bizagi.',
-    achievements: [
-      { title: 'ROI Excepcional', description: '90% mejora en eficiencia operacional', icon: '💰' },
-      { title: 'Escalabilidad', description: 'Arquitectura serverless escalable', icon: '📊' },
-      { title: 'UX Moderna', description: 'Interfaz intuitiva y responsive', icon: '✨' }
-    ]
-  },
-  {
-    id: 'sistema-kinesiologico',
-    title: 'Sistema Kinesiológico Deportivo',
-    description: 'Sistema especializado para gestión kinesiológica de equipos de fútbol con seguimiento de lesiones, tratamientos y rendimiento.',
-    stack: [
-      { name: 'React', icon: '⚛️' },
-      { name: 'Django', icon: '🐍' },
-      { name: 'PostgreSQL', icon: '🐘' },
-      { name: 'Docker', icon: '🐳' },
-      { name: 'Nginx', icon: '🌐' },
-      { name: 'Cloudflare', icon: '☁️' }
-    ],
-    industry: 'Salud y deporte',
-    timeline: '3 meses',
-    roi: '+80% eficiencia',
-    thumbnail: '/images/projects/kinesiologia.svg',
-    previewImage: '/images/projects/screenshots/kinesiologia/1.webp',
-    screenshots: [
-      '/images/projects/screenshots/kinesiologia/1.webp',
-      '/images/projects/screenshots/kinesiologia/2.webp',
-      '/images/projects/screenshots/kinesiologia/3.webp',
-      '/images/projects/screenshots/kinesiologia/4.webp',
-      '/images/projects/screenshots/kinesiologia/5.webp',
-      '/images/projects/screenshots/kinesiologia/5.1.webp',
-      '/images/projects/screenshots/kinesiologia/6.webp',
-      '/images/projects/screenshots/kinesiologia/6.1.webp',
-      '/images/projects/screenshots/kinesiologia/7.webp',
-      '/images/projects/screenshots/kinesiologia/8.webp',
-      '/images/projects/screenshots/kinesiologia/9.webp',
-      '/images/projects/screenshots/kinesiologia/10.webp',
-      '/images/projects/screenshots/kinesiologia/11.webp',
-      '/images/projects/screenshots/kinesiologia/12.webp',
-      '/images/projects/screenshots/kinesiologia/13.webp',
-      '/images/projects/screenshots/kinesiologia/14.webp',
-      '/images/projects/screenshots/kinesiologia/15.webp',
-      '/images/projects/screenshots/kinesiologia/16.webp',
-      '/images/projects/screenshots/kinesiologia/17.webp',
-      '/images/projects/screenshots/kinesiologia/19.webp'
-    ],
-    architecture: 'Sistema web con React frontend, Django REST API backend, base de datos PostgreSQL para almacenamiento de datos médicos, contenedorización con Docker y despliegue seguro en la nube.',
-    achievements: [
-      { title: 'Gestión Médica', description: 'Seguimiento completo de lesiones', icon: '🏥' },
-      { title: 'Rendimiento', description: 'Análisis de performance deportiva', icon: '⚽' },
-      { title: 'Usabilidad', description: 'Interfaz intuitiva para profesionales', icon: '👨‍⚕️' }
-    ]
-  }
-]
+import projectsData, { Project } from '@/data/projects'
 
 interface ProjectsProps {
   className?: string
@@ -173,7 +22,7 @@ export function Projects({ className }: ProjectsProps) {
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation()
 
   const handleViewDetails = (projectId: string) => {
-    const project = projects.find(p => p.id === projectId)
+    const project = projectsData.find(p => p.id === projectId)
     if (project) {
       setSelectedProject(project)
       setIsModalOpen(true)
@@ -186,7 +35,7 @@ export function Projects({ className }: ProjectsProps) {
   }
 
   const handleViewImages = (projectId: string) => {
-    const project = projects.find(p => p.id === projectId)
+    const project = projectsData.find(p => p.id === projectId)
     if (project && project.screenshots.length > 0) {
       setGalleryImages(
         project.screenshots.map((screenshot, index) => ({
@@ -248,7 +97,7 @@ export function Projects({ className }: ProjectsProps) {
             animate={gridVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {projects.map((project, index) => (
+            {projectsData.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 30 }}

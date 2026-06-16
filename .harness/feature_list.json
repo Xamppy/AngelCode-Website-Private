@@ -112,17 +112,19 @@
       "id": "PORTFOLIO-001",
       "category": "portfolio",
       "description": "Fuente de datos centralizada para proyectos (src/data/projects.ts)",
-      "status": "pending",
+      "status": "done",
       "priority": "alta",
-      "location": "src/data/projects.ts"
+      "location": "src/data/projects.ts",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "PORTFOLIO-002",
       "category": "portfolio",
       "description": "Refactorizar Projects.tsx para leer desde datos, no hardcodear",
-      "status": "pending",
+      "status": "done",
       "priority": "alta",
-      "location": "src/components/sections/projects.tsx"
+      "location": "src/components/sections/projects.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "PORTFOLIO-003",

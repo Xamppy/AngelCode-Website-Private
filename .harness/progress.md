@@ -1,24 +1,19 @@
 # Progress - Registro de Sesiones
 
-> Este archivo registra TODO lo que se ha hecho en el proyecto.
-> Se actualiza al final de cada sesion de trabajo.
-
 ---
 
 ## Registro de Sesiones
 
-### Sesion: 2026-06-16
+### Sesion: 2026-06-16 - Fase 1: Fundacion del Portfolio
 **Tareas completadas**:
-- Auditoria completa del sitio (TECNICO, SEO, UX)
-- Configurado multi-agente: Hermes + Claude Code + CCR + DeepSeek
-- Eliminados @import duplicados de Google Fonts en globals.css (TECH-001)
-- Creada estructura .harness
+- Creado src/data/projects.ts con 8 proyectos (MotoForAll, Podoclinic, Retorno Seguro, Minimarket Mayorista, KineSW, EstetikFlow, CineMatch, Minimarket Almacen)
+- Refactorizado projects.tsx para leer desde data/projects.ts en vez de hardcodear
+- Build verificado (npm run build -> OK)
 
-**Issues encontrados**:
-- Duplicate Google Fonts loading (fix: eliminados @import)
-- Hero background image sin extension .png
-- background-attachment fixed causa jank en mobile
-- Formulario de contacto con 7 campos (muchos para conversion)
+**Proximos pasos (Fase 1)**:
+- Disenar nuevas ProjectCards con badges de tecnologias
+- Agregar filtro por categoria/industria
+- Link a repos/demos
 
-**Proximos pasos**:
-- Revisar prioridades pendientes en feature_list.json
+**Issues**:
+- Claude Code con --max-turns 5 fue insuficiente (uso directo de patch tool)
