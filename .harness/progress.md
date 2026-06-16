@@ -17,3 +17,13 @@
 
 **Issues**:
 - Claude Code con --max-turns 5 fue insuficiente (uso directo de patch tool)
+
+### Sesion: 2026-06-16 - Fase 1: Filtro + ProjectCards mejoradas
+**Tareas completadas**:
+- Filtro por industria en seccion de proyectos (PORTFOLIO-003)
+- Status badge en cada ProjectCard (En Vivo, En Desarrollo, Completado, Prototipo)
+- Links a Demo y Repo por proyecto
+- Iconos de industria actualizados (Transporte, Entretenimiento)
+- Build verificado
+
+**Pendientes**: Fase 2 (subpaginas), Fase 3 (WhatsApp, 404, formulario), etc.

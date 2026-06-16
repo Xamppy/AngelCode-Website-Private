@@ -130,9 +130,10 @@
       "id": "PORTFOLIO-003",
       "category": "portfolio",
       "description": "Filtro por categoria/industria en proyectos",
-      "status": "pending",
+      "status": "done",
       "priority": "media",
-      "location": "src/components/sections/projects.tsx"
+      "location": "src/components/sections/projects.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "PAGE-001",
