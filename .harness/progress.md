@@ -27,3 +27,12 @@
 - Build verificado
 
 **Pendientes**: Fase 2 (subpaginas), Fase 3 (WhatsApp, 404, formulario), etc.
+
+
+### Sesion: 2026-06-16 - Fase 2 + 3 (parcial)
+**Tareas completadas**:
+- Subpagina /proyectos/[slug] con SEO dinamico (PAGE-001)
+- Pagina 404 personalizada con CTAs (PAGE-003)
+- Build verificado
+
+**Pendientes**: /servicios/[slug], WhatsApp flotante, acortar formulario, FAQ Schema, CSP

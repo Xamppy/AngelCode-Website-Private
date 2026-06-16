@@ -139,9 +139,10 @@
       "id": "PAGE-001",
       "category": "pages",
       "description": "Subpagina /proyectos/[slug] con detalle individual",
-      "status": "pending",
+      "status": "done",
       "priority": "alta",
-      "location": "src/app/proyectos/[slug]/page.tsx"
+      "location": "src/app/proyectos/[slug]/page.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "PAGE-002",
@@ -155,9 +156,10 @@
       "id": "PAGE-003",
       "category": "pages",
       "description": "Pagina 404 personalizada con CTAs",
-      "status": "pending",
+      "status": "done",
       "priority": "media",
-      "location": "src/app/not-found.tsx"
+      "location": "src/app/not-found.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "UX-001",
