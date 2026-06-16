@@ -165,9 +165,10 @@
       "id": "UX-001",
       "category": "ux",
       "description": "Boton WhatsApp flotante con mensaje predefinido",
-      "status": "pending",
+      "status": "done",
       "priority": "alta",
-      "location": "src/components/ui/whatsapp-button.tsx"
+      "location": "src/components/ui/whatsapp-button.tsx",
+      "completedAt": "2026-06-16"
     },
     {
       "id": "UX-002",

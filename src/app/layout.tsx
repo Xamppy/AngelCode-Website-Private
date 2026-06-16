@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navigation } from "@/components/ui/navigation";
 import { StructuredData } from "@/components/seo/structured-data";
 import { Toaster } from "react-hot-toast";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -96,6 +97,7 @@ export default function RootLayout({
         <main className="relative">
           {children}
         </main>
+        <WhatsAppButton />
         <Toaster
           position="bottom-right"
           toastOptions={{

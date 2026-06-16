@@ -36,3 +36,6 @@
 - Build verificado
 
 **Pendientes**: /servicios/[slug], WhatsApp flotante, acortar formulario, FAQ Schema, CSP
+
+### Sesion: 2026-06-16 - UX mejoras
+**Completado**: WhatsApp flotante (UX-001) + 404 custom (PAGE-003)
