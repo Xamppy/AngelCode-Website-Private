@@ -1,0 +1,29 @@
+# Angel Code Soluciones
+## Desarrollo de Software y Consultoría Tecnológica
+
+> Transformamos ideas en soluciones tecnológicas escalables. Especialistas en desarrollo web, integración de IA, DevOps y automatización.
+
+## About
+
+Angel Code Soluciones es una empresa chilena de desarrollo de software y consultoría tecnológica fundada en 2022. Con más de 15 proyectos exitosos y 3 años de experiencia, nos especializamos en crear soluciones digitales a medida para PYMEs y empresas en crecimiento. Nuestro equipo combina expertise en desarrollo web moderno, inteligencia artificial, infraestructura cloud y automatización de procesos para entregar productos de alta calidad.
+
+## Key Pages
+
+- Homepage: https://angelcodesoluciones.cl/
+- Services: https://angelcodesoluciones.cl/servicios
+- Projects: https://angelcodesoluciones.cl/proyectos
+- Contact: https://angelcodesoluciones.cl/#contacto
+
+## Services
+
+- **Desarrollo de Software**: Aplicaciones web y móviles con Next.js, React, TypeScript, Node.js y bases de datos modernas. Arquitecturas escalables y mantenibles.
+- **Integración de IA**: Implementación de modelos de lenguaje (LLMs), asistentes inteligentes, automatización con agentes de IA y análisis predictivo para optimizar operaciones.
+- **DevOps & Automatización**: Infraestructura cloud (AWS, Vercel), CI/CD, Docker, Kubernetes, monitoreo y automatización de flujos de trabajo.
+- **Consultoría Tecnológica**: Auditoría de código, optimización de rendimiento, revisión de arquitectura, mentoring y transformación digital.
+
+## Contact
+
+- Email: contacto@angelcodesoluciones.cl
+- Phone: +56 9 1234 5678
+- Location: Santiago, Chile
+- Website: https://angelcodesoluciones.cl

@@ -3,7 +3,7 @@ import services from '@/data/services'
 function getFaqSchema() {
   return {
     "@type": "FAQPage",
-    "@id": "https://angelcodesoluciones.cl/#faq",
+    "@id": "https://www.angelcodesoluciones.cl/#faq",
     "mainEntity": [
       {
         "@type": "Question",
@@ -83,9 +83,9 @@ function getReviewSchema() {
       "itemReviewed": {
         "@type": "Service",
         "name": "Sistema de Gestión Clínica",
-        "provider": { "@id": "https://angelcodesoluciones.cl/#organization" }
+        "provider": { "@id": "https://www.angelcodesoluciones.cl/#organization" }
       },
-      "publisher": { "@id": "https://angelcodesoluciones.cl/#organization" }
+      "publisher": { "@id": "https://www.angelcodesoluciones.cl/#organization" }
     },
     {
       "@type": "Review",
@@ -95,9 +95,9 @@ function getReviewSchema() {
       "itemReviewed": {
         "@type": "Service",
         "name": "Sistema de Ventas Mayoristas",
-        "provider": { "@id": "https://angelcodesoluciones.cl/#organization" }
+        "provider": { "@id": "https://www.angelcodesoluciones.cl/#organization" }
       },
-      "publisher": { "@id": "https://angelcodesoluciones.cl/#organization" }
+      "publisher": { "@id": "https://www.angelcodesoluciones.cl/#organization" }
     },
     {
       "@type": "Review",
@@ -107,9 +107,9 @@ function getReviewSchema() {
       "itemReviewed": {
         "@type": "Service",
         "name": "Sistema Kinesiológico Deportivo",
-        "provider": { "@id": "https://angelcodesoluciones.cl/#organization" }
+        "provider": { "@id": "https://www.angelcodesoluciones.cl/#organization" }
       },
-      "publisher": { "@id": "https://angelcodesoluciones.cl/#organization" }
+      "publisher": { "@id": "https://www.angelcodesoluciones.cl/#organization" }
     }
   ]
 }
@@ -120,12 +120,12 @@ export function StructuredData() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://angelcodesoluciones.cl/#organization",
+        "@id": "https://www.angelcodesoluciones.cl/#organization",
         "name": "Angel Code Soluciones",
-        "url": "https://angelcodesoluciones.cl",
+        "url": "https://www.angelcodesoluciones.cl",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://angelcodesoluciones.cl/images/og-image.png",
+          "url": "https://www.angelcodesoluciones.cl/images/og-image.png",
           "width": 1200,
           "height": 630
         },
@@ -153,25 +153,25 @@ export function StructuredData() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://angelcodesoluciones.cl/#website",
-        "url": "https://angelcodesoluciones.cl",
+        "@id": "https://www.angelcodesoluciones.cl/#website",
+        "url": "https://www.angelcodesoluciones.cl",
         "name": "Angel Code Soluciones",
         "description": "Transformamos ideas en soluciones tecnológicas escalables. Especializados en desarrollo de software, integración de IA, DevOps y automatización empresarial.",
         "publisher": {
-          "@id": "https://angelcodesoluciones.cl/#organization"
+          "@id": "https://www.angelcodesoluciones.cl/#organization"
         },
         "inLanguage": "es-CL"
       },
       {
         "@type": "WebPage",
-        "@id": "https://angelcodesoluciones.cl/#webpage",
-        "url": "https://angelcodesoluciones.cl",
+        "@id": "https://www.angelcodesoluciones.cl/#webpage",
+        "url": "https://www.angelcodesoluciones.cl",
         "name": "Angel Code Soluciones - Desarrollo de Software y Consultoría Tecnológica",
         "isPartOf": {
-          "@id": "https://angelcodesoluciones.cl/#website"
+          "@id": "https://www.angelcodesoluciones.cl/#website"
         },
         "about": {
-          "@id": "https://angelcodesoluciones.cl/#organization"
+          "@id": "https://www.angelcodesoluciones.cl/#organization"
         },
         "description": "Transformamos ideas en soluciones tecnológicas escalables. Especializados en desarrollo de software, integración de IA, DevOps y automatización empresarial.",
         "inLanguage": "es-CL"
@@ -180,7 +180,7 @@ export function StructuredData() {
         "@type": "Service",
         "name": s.title,
         "description": s.description,
-        "provider": { "@id": "https://angelcodesoluciones.cl/#organization" },
+        "provider": { "@id": "https://www.angelcodesoluciones.cl/#organization" },
         "serviceType": s.id,
         "areaServed": "Chile"
       })),

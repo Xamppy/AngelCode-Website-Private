@@ -62,3 +62,8 @@ ehthumbs.db
 /images/
 /prompts/
 /designs/
+
+# Engram DB (regenerada automaticamente)
+engram/engram.db
+engram/*.db
+

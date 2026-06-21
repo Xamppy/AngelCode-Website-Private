@@ -57,13 +57,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_CL",
-    url: "https://angelcodesoluciones.cl",
+    url: "https://www.angelcodesoluciones.cl",
     title: "Angel Code Soluciones - Desarrollo de Software y Consultoría Tecnológica",
     description: "Transformamos ideas en soluciones tecnológicas escalables. Especializados en desarrollo de software, integración de IA, DevOps y automatización empresarial.",
     siteName: "Angel Code Soluciones",
     images: [
       {
-        url: "https://angelcodesoluciones.cl/images/og-image.png",
+        url: "https://www.angelcodesoluciones.cl/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Angel Code Soluciones - Desarrollo de Software",
@@ -74,10 +74,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Angel Code Soluciones - Desarrollo de Software y Consultoría Tecnológica",
     description: "Transformamos ideas en soluciones tecnológicas escalables. Especializados en desarrollo de software, integración de IA, DevOps y automatización empresarial.",
-    images: ["https://angelcodesoluciones.cl/images/og-image.png"],
+    images: ["https://www.angelcodesoluciones.cl/images/og-image.png"],
   },
   alternates: {
-    canonical: "https://angelcodesoluciones.cl",
+    canonical: "https://www.angelcodesoluciones.cl",
   },
   category: "technology",
   manifest: "/manifest.json",
