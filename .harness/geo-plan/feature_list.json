@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "project": "Angel Code Soluciones — GEO Optimization",
+    "audit_date": "2026-06-21",
+    "current_geo_score": 66,
+    "target_geo_score": 85,
+    "repo": "Xamppy/AngelCode-Website-Private"
+  },
+  "features": [
+    {
+      "id": "ACS-GEO-001",
+      "title": "Corregir og-image.png (existe como .svg)",
+      "severity": "critical",
+      "phase": 1,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 15
+    },
+    {
+      "id": "ACS-GEO-002",
+      "title": "Unificar canonical www vs non-www",
+      "severity": "critical",
+      "phase": 1,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 15
+    },
+    {
+      "id": "ACS-GEO-003",
+      "title": "Crear archivo /llms.txt",
+      "severity": "critical",
+      "phase": 1,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 20
+    },
+    {
+      "id": "ACS-GEO-004",
+      "title": "Crear página About / equipo",
+      "severity": "critical",
+      "phase": 1,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 90
+    },
+    {
+      "id": "ACS-GEO-005",
+      "title": "Agregar Person + BreadcrumbList schema",
+      "severity": "high",
+      "phase": 2,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "ACS-GEO-006",
+      "title": "Agregar LocalBusiness schema",
+      "severity": "high",
+      "phase": 2,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 15
+    },
+    {
+      "id": "ACS-GEO-007",
+      "title": "Optimizar Service schema con keywords objetivo",
+      "severity": "high",
+      "phase": 2,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "ACS-GEO-008",
+      "title": "Agregar reglas AI crawlers a robots.txt",
+      "severity": "high",
+      "phase": 2,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 15
+    },
+    {
+      "id": "ACS-GEO-009",
+      "title": "Agregar sección Blog o Casos de Éxito",
+      "severity": "high",
+      "phase": 2,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 120
+    },
+    {
+      "id": "ACS-GEO-010",
+      "title": "Optimizar meta/keywords en subpáginas de servicios",
+      "severity": "medium",
+      "phase": 3,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 45
+    },
+    {
+      "id": "ACS-GEO-011",
+      "title": "Crear y optimizar Google Business Profile",
+      "severity": "medium",
+      "phase": 3,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "ACS-GEO-012",
+      "title": "E-E-A-T: casos de estudio, testimonios visibles, datos verificables",
+      "severity": "medium",
+      "phase": 3,
+      "dependencies": [],
+      "status": "pending",
+      "estimated_minutes": 90
+    }
+  ]
+}
