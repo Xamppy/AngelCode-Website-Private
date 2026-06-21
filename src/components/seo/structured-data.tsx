@@ -119,7 +119,14 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "BreadcrumbList",
+        "@id": "https://www.angelcodesoluciones.cl/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.angelcodesoluciones.cl" }
+        ]
+      },
+      {
+        "@type": ["Organization", "LocalBusiness"],
         "@id": "https://www.angelcodesoluciones.cl/#organization",
         "name": "Angel Code Soluciones",
         "url": "https://www.angelcodesoluciones.cl",
@@ -149,7 +156,27 @@ export function StructuredData() {
         ],
         "foundingDate": "2025",
         "numberOfEmployees": "1",
-        "industry": "Software Development"
+        "industry": "Software Development",
+        "priceRange": "$50000 - $500000",
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "18:00" }
+        ],
+        "areaServed": ["Viña del Mar", "Valparaíso", "Chile"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.angelcodesoluciones.cl/#person",
+        "name": "Felipe Orellana",
+        "givenName": "Felipe",
+        "familyName": "Orellana",
+        "jobTitle": "Ingeniero en Informatica",
+        "knowsAbout": ["Desarrollo de software", "Arquitectura web", "Inteligencia Artificial", "Automatizacion empresarial"],
+        "affiliation": { "@id": "https://www.angelcodesoluciones.cl/#organization" },
+        "sameAs": ["https://www.linkedin.com/in/felipe-orellana-alvarez-965984333/", "https://github.com/Xamppy"]
       },
       {
         "@type": "WebSite",
@@ -182,6 +209,12 @@ export function StructuredData() {
         "description": s.description,
         "provider": { "@id": "https://www.angelcodesoluciones.cl/#organization" },
         "serviceType": s.id,
+        "keywords": ({
+          'web-development': 'desarrollo web Chile, paginas web, landing pages, e-commerce, tienda online',
+          'business-systems': 'software a medida, sistema POS, booking online, control inventario, desarrollo sistemas',
+          'maintenance-support': 'mantenimiento web, hosting Chile, seguridad sitio web, soporte tecnico',
+          'automation': 'chatbot WhatsApp, automatizacion procesos, IA negocios, chatbot web'
+        } as Record<string, string>)[s.id] || '',
         "areaServed": "Chile"
       })),
       getFaqSchema(),
